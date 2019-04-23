@@ -1,4 +1,4 @@
-package gui;
+package gui.customers;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -8,28 +8,28 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import model.Customers;
 
-public class CustomersView {
+class CustomersView {
 
     static TableView<Customers> table = new TableView<>();
-    static GridPane newGrid = new GridPane();
-    static Label customersLabel = new Label("Customers");
-    static Region gridRegionH = new Region();
-    static Region gridRegionW = new Region();
-    static Region hBoxRegion = new Region();
-    static Region wBoxRegion = new Region();
+    private static GridPane newGrid = new GridPane();
+    private static Label customersLabel = new Label("Customers");
+    private static Region gridRegionH = new Region();
+    private static Region gridRegionW = new Region();
+    private static Region hBoxRegion = new Region();
+    private static Region wBoxRegion = new Region();
 
-    static Label customersMenuLabel = new Label("Customers");
+    private static Label customersMenuLabel = new Label("Customers");
     static Label ordersMenuLabel =new Label("Orders");
     static Label productsMenuLabel =new Label("Products");
     static Label companyMenuLabel = new Label("Company");
-    static Menu menu1 = new Menu("", customersMenuLabel);
-    static Menu menu2 = new Menu("", ordersMenuLabel);
-    static Menu menu3 = new Menu("", productsMenuLabel);
-    static Menu menu4 = new Menu("", companyMenuLabel);
+    private static Menu menu1 = new Menu("", customersMenuLabel);
+    private static Menu menu2 = new Menu("", ordersMenuLabel);
+    private static Menu menu3 = new Menu("", productsMenuLabel);
+    private static Menu menu4 = new Menu("", companyMenuLabel);
 
-    static MenuBar menuBar = new MenuBar();
+    private static MenuBar menuBar = new MenuBar();
 
-    static GridPane editGrid = new GridPane();
+    private static GridPane editGrid = new GridPane();
 
     static TableColumn<Customers,Integer> idCol = new TableColumn<>("ID");
     static TableColumn<Customers,String> firstNameCol = new TableColumn<>("First Name");
@@ -37,11 +37,11 @@ public class CustomersView {
     static TableColumn<Customers,String> emailCol = new TableColumn<>("Email");
     static TableColumn<Customers,String> telephoneCol = new TableColumn<>("Phone" );
 
-    static Label idLabel = new Label("ID");
-    static Label customerNameLabel = new Label("Name");
-    static Label customerSurnameLabel = new Label("Surname");
-    static Label customerEmailLabel = new Label("Email");
-    static Label customerPhoneLabel = new Label("Phone");
+    private static Label idLabel = new Label("ID");
+    private static Label customerNameLabel = new Label("Name");
+    private static Label customerSurnameLabel = new Label("Surname");
+    private static Label customerEmailLabel = new Label("Email");
+    private static Label customerPhoneLabel = new Label("Phone");
 
 
     static TextField id = new TextField();
@@ -56,7 +56,7 @@ public class CustomersView {
     static Button clearButton = new Button("Clear");
     static TextField idSelect = new TextField();
 
-    public BorderPane interfaceUI() {
+    BorderPane interfaceUI() {
         table.getItems().clear();
         table.getColumns().clear();
         newGrid.getChildren().clear();

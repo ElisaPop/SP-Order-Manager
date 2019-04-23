@@ -1,4 +1,4 @@
-package gui;
+package gui.products;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -8,27 +8,27 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import model.Products;
 
-public class ProductsView {
+class ProductsView {
 
     static TableView<Products> table = new TableView<>();
-    static GridPane newGrid = new GridPane();
-    static Label productsLabel = new Label("Products");
-    static Region gridRegionH = new Region();
-    static Region gridRegionW = new Region();
-    static Region hBoxRegion = new Region();
-    static Region wBoxRegion = new Region();
+    private static GridPane newGrid = new GridPane();
+    private static Label productsLabel = new Label("Products");
+    private static Region gridRegionH = new Region();
+    private static Region gridRegionW = new Region();
+    private static Region hBoxRegion = new Region();
+    private static Region wBoxRegion = new Region();
 
     static Label customersMenuLabel = new Label("Customers");
     static Label ordersMenuLabel =new Label("Orders");
-    static Label productsMenuLabel =new Label("Products");
+    private static Label productsMenuLabel =new Label("Products");
     static Label companyMenuLabel = new Label("Company");
-    static Menu menu1 = new Menu("", customersMenuLabel);
-    static Menu menu2 = new Menu("", ordersMenuLabel);
-    static Menu menu3 = new Menu("", productsMenuLabel);
-    static Menu menu4 = new Menu("", companyMenuLabel);
-    static MenuBar menuBar = new MenuBar();
+    private static Menu menu1 = new Menu("", customersMenuLabel);
+    private static Menu menu2 = new Menu("", ordersMenuLabel);
+    private static Menu menu3 = new Menu("", productsMenuLabel);
+    private static Menu menu4 = new Menu("", companyMenuLabel);
+    private static MenuBar menuBar = new MenuBar();
 
-    static GridPane editGrid = new GridPane();
+    private static GridPane editGrid = new GridPane();
 
     static TableColumn<Products,Integer> idCol = new TableColumn<>("ID");
     static TableColumn<Products,Integer> compidCol = new TableColumn<>("Company ID");
@@ -36,11 +36,11 @@ public class ProductsView {
     static TableColumn<Products,Integer> stockCol = new TableColumn<>("Stock");
     static TableColumn<Products,Double> valueCol = new TableColumn<>("Value" );
 
-    static Label idLabel = new Label("ID");
-    static Label compidLabel = new Label("Company ID");
-    static Label nameLabel = new Label("Name");
-    static Label stockLabel = new Label("Stock");
-    static Label amountLabel = new Label("Value");
+    private static Label idLabel = new Label("ID");
+    private static Label compidLabel = new Label("Company ID");
+    private static Label nameLabel = new Label("Name");
+    private static Label stockLabel = new Label("Stock");
+    private static Label amountLabel = new Label("Value");
 
 
     static TextField id = new TextField();
@@ -55,7 +55,7 @@ public class ProductsView {
     static Button clearButton = new Button("Clear");
     static TextField idSelect = new TextField();
 
-    public BorderPane interfaceUI() {
+    BorderPane interfaceUI() {
 
         table.getItems().clear();
         table.getColumns().clear();

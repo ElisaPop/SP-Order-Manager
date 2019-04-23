@@ -1,4 +1,4 @@
-package gui;
+package gui.company;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,35 +10,35 @@ import model.Company;
 
 public class CompanyView {
 
-    static TableView<Company> table = new TableView<>();
-    static GridPane newGrid = new GridPane();
-    static Label companyLabel = new Label("Company");
-    static Region gridRegionH = new Region();
-    static Region gridRegionW = new Region();
-    static Region hBoxRegion = new Region();
-    static Region wBoxRegion = new Region();
+    public static TableView<Company> table = new TableView<>();
+    private static GridPane newGrid = new GridPane();
+    private static Label companyLabel = new Label("Company");
+    private static Region gridRegionH = new Region();
+    private static Region gridRegionW = new Region();
+    private static Region hBoxRegion = new Region();
+    private static Region wBoxRegion = new Region();
 
     static Label customersMenuLabel = new Label("Customers");
     static Label ordersMenuLabel =new Label("Orders");
     static Label productsMenuLabel =new Label("Products");
-    static Label companyMenuLabel = new Label("Company");
-    static Menu menu1 = new Menu("", customersMenuLabel);
-    static Menu menu2 = new Menu("", ordersMenuLabel);
-    static Menu menu3 = new Menu("", productsMenuLabel);
-    static Menu menu4 = new Menu("", companyMenuLabel);
+    private static Label companyMenuLabel = new Label("Company");
+    private static Menu menu1 = new Menu("", customersMenuLabel);
+    private static Menu menu2 = new Menu("", ordersMenuLabel);
+    private static Menu menu3 = new Menu("", productsMenuLabel);
+    private static Menu menu4 = new Menu("", companyMenuLabel);
 
-    static MenuBar menuBar = new MenuBar();
+    private static MenuBar menuBar = new MenuBar();
 
-    static GridPane editGrid = new GridPane();
+    private static GridPane editGrid = new GridPane();
 
     static TableColumn<Company,Integer> idCol = new TableColumn<>("ID");
     static TableColumn<Company,String> firstNameCol = new TableColumn<>("Name");
 
-    static Label idLabel = new Label("ID");
-    static Label companyNewNameLabel = new Label("Name");
+    private static Label idLabel = new Label("ID");
+    private static Label companyNewNameLabel = new Label("Name");
 
 
-    static TextField id = new TextField();
+    public static TextField id = new TextField();
     static TextField companyNewName = new TextField();
 
     static Button addButton = new Button("Add");
@@ -47,7 +47,7 @@ public class CompanyView {
     static Button clearButton = new Button("Clear");
     static TextField idSelect = new TextField();
 
-    public BorderPane interfaceUI() {
+    BorderPane interfaceUI() {
         table.getItems().clear();
         table.getColumns().clear();
         newGrid.getChildren().clear();

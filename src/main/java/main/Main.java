@@ -1,8 +1,6 @@
 package main;
 
-import gui.CustomersController;
-import gui.OrderController;
-import gui.ProductsController;
+import gui.customers.CustomersController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -13,7 +11,6 @@ public class Main extends Application {
         CustomersController mainCtrl = new CustomersController();
 
         primaryStage.setScene(mainCtrl.getSceneCustomers());
-        //Model.alertOnClose(primaryStage);
         primaryStage.setTitle("Order Management");
         primaryStage.show();
     }
